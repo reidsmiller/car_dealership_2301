@@ -80,7 +80,7 @@ RSpec.describe 'Dealership' do
       expect(dealership.total_value).to eq(156000)
     end
 
-    it 'can convert dealership details into a hash'
+    it 'can convert dealership details into a hash' do
       dealership = Dealership.new("Acme Auto", "123 Main Street")
       car_1 = Car.new("Ford Mustang", 1500, 36)
       car_2 = Car.new("Toyota Prius", 1000, 48)
@@ -92,6 +92,7 @@ RSpec.describe 'Dealership' do
       dealership.add_car(car_3)
       dealership.add_car(car_4)
 
-    expect(dealership.details).to eq({"total_value" => 156000, "address" => "123 Main Street"})
+      expect(dealership.details).to eq({"total_value" => 156000, "address" => "123 Main Street"})
+    end
   end
 end
