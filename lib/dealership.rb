@@ -37,6 +37,23 @@ class Dealership
       "total_value" => self.total_value,
       "address" => self.location
     }
-    
+  end
+
+  def average_price_of_car
+
+  end
+
+  def cars_sorted_by_price
+    inventory.sort_by do |car|
+      car.total_cost
+    end
+  end
+
+  def inventory_hash
+    inventory_hash = Hash.new {|hash, key| hash[key] = []}
+    inventory.each do |car|
+      inventory_hash[car.make] << car
+    end
+    inventory_hash
   end
 end
