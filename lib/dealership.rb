@@ -40,7 +40,8 @@ class Dealership
   end
 
   def average_price_of_car
-
+    ave = self.total_value / inventory.count
+    ave.to_s.reverse.insert(3, ",").reverse
   end
 
   def cars_sorted_by_price

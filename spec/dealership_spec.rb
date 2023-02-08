@@ -97,7 +97,7 @@ RSpec.describe 'Dealership' do
   end
 
   describe '#Iteration 4' do
-    xit 'can get average price of cars' do
+    it 'can get average price of cars' do
       dealership = Dealership.new("Acme Auto", "123 Main Street")
       car_1 = Car.new("Ford Mustang", 1500, 36)
       car_2 = Car.new("Toyota Prius", 1000, 48)
@@ -109,7 +109,7 @@ RSpec.describe 'Dealership' do
       dealership.add_car(car_3)
       dealership.add_car(car_4)
 
-      expect(delaership.average_price_of_car).to eq("39,000")
+      expect(dealership.average_price_of_car).to eq("39,000")
     end
 
     it 'can sort cars by price' do
