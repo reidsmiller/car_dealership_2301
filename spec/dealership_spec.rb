@@ -8,6 +8,7 @@ RSpec.describe 'Dealership' do
       dealership = Dealership.new("Acme Auto", "123 Main Street")
 
       expect(dealership).to be_instance_of(Dealership)
+      expect(dealership.location).to eq("123 Main Street")
     end
 
     it 'has an inventory and inventory count' do
